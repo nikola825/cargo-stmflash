@@ -54,7 +54,7 @@ fn main() {
         .unwrap();
 
     println!("Flash exited with {}", flash_status);
-    if !objcopy_status.success() {
+    if !flash_status.success() {
         panic!("Flash failed to complete");
     }
 }
