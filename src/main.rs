@@ -45,7 +45,7 @@ fn main() {
     }
 
     let flash_status = Command::new(stm_programmer_path)
-        .args(["-c", "port=usb1", "-d", &bin_path, "-g"]) // Assume usb1 for dbu, -g means reset after flashing
+        .args(["-c", "port=usb1", "-d", &bin_path, "-g"]) // Assume usb1 for DFU, -g means reset after flashing
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
         .spawn()
